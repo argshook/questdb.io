@@ -34,14 +34,41 @@ characters) or disk size, whichever is smaller.
 
 ## Type nullability
 
-Numeric nullable types, such as `int` or `double`, use a special number to mark
-`NULL` values. Signed integer types use the minimal number from the allowed
-range to mark a `NULL`. Here are the values used for `NULL` in numeric types:
+Nullable types use a specific value to mark `NULL` values. 
 
-- **`int`:** `0x80000000`
-- **`long`:** `0x8000000000000000L`
-- **`float`:** `NaN`
-- **`double`:** `NaN`
+| Type Name          | Null value             | Description                                                                                                           |
+|--------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| `float`            | `java.lang.Float.NaN`  | Equivalent to `Float.intBitsToFloat(0x7fc00000)`.                                                                     |
+| `double`           | `java.lang.Double.NaN` | Equivalent to `Double.longBitsToDouble(0x7ff8000000000000L)`.                                                         |
+| `long`             | `0x8000000000000000L`  | Min possible value a long can take -2^63.                                                                             |
+| `long256`          | `0x8000000000000000L`  | **x4**, *four consecutive long null values*.                                                                          |
+| `date`             | `0x8000000000000000L`  |                                                                                                                       |
+| `timestamp`        | `0x8000000000000000L`  |                                                                                                                       |
+| `int`              | `0x80000000`           | Min possible value an int can take, -2^31.                                                                            |
+| `symbol`           | `0x80000000`           | Symbols are stored as `int` offsets in a lookup file.                                                                 |
+| `string`           | `0xffffffff`           | Strings are length prefixed, the length is an `int` and `-1` marks it `NULL` (no further storage is used).            |
+| `binary`           | `0xffffffffffffffff`   | Binary columns are also length prefixed, the length is a `long` and `-1` marks it `NULL` (no further storage is used). |
+| `geohash(byte)`    | `0xff`                 | Geohashes `from 1 up to included 7 bits`.                                                                             |
+| `geohash(short)`   | `0xffff`               | Geohashes `from 8 up to included 15 bits`.                                                                            |
+| `geohash(int)`     | `0xffffffff`           | Geohashes `from 16 up to included 31 bits`.                                                                           |
+| `geohash(long)`    | `0xffffffffffffffff`   | Geohashes `from 32 up to included 60 bits`.                                                                           |
 
-As an important consequence, `NULL` values of nullable types still occupy disk
-space.
+
+To filter columns that contain, or don't contain, `NULL` values use a filter like:
+
+```questdb-sql
+SELECT * FROM <table> WHERE <column> = NULL;
+SELECT * FROM <table> WHERE <column> != NULL;
+```
+
+Alternatively, use the equality operator aliases: 
+
+```questdb-sql
+SELECT * FROM <table> WHERE <column> IS NULL;
+SELECT * FROM <table> WHERE <column> IS NOT NULL;
+```
+
+:::note
+An **important consequence** of this is that `NULL` values
+still occupy disk space.
+:::
