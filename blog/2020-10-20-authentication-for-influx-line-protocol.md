@@ -65,7 +65,7 @@ hopefully future proof. The elliptic curve cryptographic keys have a public and
 secret component, it is possible to configure QuestDB with just the public part,
 thereby mitigating any risks of storing secret information on the server.
 Languages such as
-[JavaScript and Go](/docs/develop/insert-data/#influxdb-line-protocol) have
+[JavaScript and Go](/docs/connect/ilp) have
 standard libraries that implement ECC, the
 [JSON Web Key](https://tools.ietf.org/html/rfc7517) standard can be used to
 store and distribute the keys in a clear and ubiquitous manner.

@@ -23,14 +23,8 @@ QuestDB. Some features that exists for Postgres do not apply to QuestDB.
 - Plain authentication
 
 Examples which demonstrate how to use Postgres clients in a number of different
-languages can be found on the following pages:
-
-- [Connect](/docs/develop/connect/#postgres-compatibility) shows how to create a
-  connection to QuestDB using Postgres
-- [Insert data](/docs/develop/insert-data/#postgres-compatibility) demonstrates
-  how to use paramaterized queries and prepared statements to insert data
-- [Query data](/docs/develop/query-data/#postgres-compatibility) shows how to
-  run queries against tables
+languages can be found on the
+[PostgreSQL development page](/docs/connect/postgres).
 
 ### List of unsupported features
 

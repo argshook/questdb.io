@@ -143,7 +143,7 @@ const GetQuestdbPage = () => {
         title="FreeBSD"
       >
         <p className={biCss.binary__docs}>
-          <a href="/docs/get-started/binaries#your-operating-system-version">
+          <a href="/docs/install/binaries#your-operating-system-version">
             Docs
           </a>
         </p>
@@ -167,7 +167,7 @@ const GetQuestdbPage = () => {
         title="Linux"
       >
         <p className={biCss.binary__docs}>
-          <a href="/docs/get-started/binaries#your-operating-system-version">
+          <a href="/docs/install/binaries#your-operating-system-version">
             Docs
           </a>
         </p>
@@ -196,7 +196,7 @@ brew install questdb`}
         </CodeBlock>
 
         <p className={biCss.binary__docs}>
-          <a href="/docs/get-started/homebrew">Docs</a>
+          <a href="/docs/install/homebrew">Docs</a>
         </p>
       </Binary>
     ),
@@ -218,7 +218,7 @@ brew install questdb`}
         title="Windows"
       >
         <p className={biCss.binary__docs}>
-          <a href="/docs/get-started/binaries#your-operating-system-version">
+          <a href="/docs/install/binaries#your-operating-system-version">
             Docs
           </a>
         </p>
@@ -260,9 +260,9 @@ brew install questdb`}
           >
             You can find below download links for the latest version of QuestDB
             ({release.name}). Once your download is finished, you can check our
-            documentation for <a href="/docs/get-started/docker/">Docker</a>,
-            the <a href="/docs/get-started/binaries/">binaries</a> or{" "}
-            <a href="/docs/get-started/homebrew/">Homebrew</a> to get started.
+            documentation for <a href="/docs/install/docker/">Docker</a>, the
+            <a href="/docs/install/binaries/">binaries</a> or{" "}
+            <a href="/docs/install/homebrew/">Homebrew</a> to get started.
           </p>
 
           <img
@@ -330,7 +330,7 @@ brew install questdb`}
             docker run -p 9000:9000 questdb/questdb
           </CodeBlock>
           <p className={biCss.binary__docs}>
-            <a href="/docs/get-started/docker">Docs</a>
+            <a href="/docs/install/docker">Docs</a>
           </p>
         </Binary>
         <Binary
@@ -393,7 +393,7 @@ helm install my-questdb questdb/questdb --version ${customFields.helmVersion}`}
           title="Any (no JVM)"
         >
           <p className={biCss.binary__docs}>
-            <a href="/docs/get-started/binaries#any-no-jvm-version">Docs</a>
+            <a href="/docs/install/binaries#any-no-jvm-version">Docs</a>
           </p>
         </Binary>
         <Binary
@@ -470,7 +470,7 @@ helm install my-questdb questdb/questdb --version ${customFields.helmVersion}`}
           <p>
             To find out more about how to use the binaries, please check
             the&nbsp;
-            <a href="/docs/get-started/binaries/">dedicated page</a> in our
+            <a href="/docs/install/binaries/">dedicated page</a> in our
             documentation.
           </p>
           <p>

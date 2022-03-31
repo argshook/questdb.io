@@ -16,8 +16,8 @@ endpoint.
 ## Prerequisites
 
 QuestDB should be running and accessible and can be started via
-[Docker](/docs/get-started/docker/), the [binaries](/docs/get-started/binaries/)
-or [Homebrew](/docs/get-started/homebrew/) for macOS users.
+[Docker](/docs/install/docker/), the [binaries](/docs/install/binaries/)
+or [Homebrew](/docs/install/homebrew/) for macOS users.
 
 The [jose](https://github.com/latchset/jose) package is a C-language
 implementation of the Javascript Object Signing and Encryption standard and may
@@ -92,7 +92,7 @@ echo "$KID ec-p-256-sha256 $X $Y" | tee /var/lib/questdb/conf/auth.txt
 Once you created the file, you will need to reference it in the server
 [configuration](/docs/reference/configuration/):
 
-```bash title='/path/to/server.conf'
+```ini title='/path/to/server.conf'
 line.tcp.auth.db.path=conf/auth.txt
 ```
 

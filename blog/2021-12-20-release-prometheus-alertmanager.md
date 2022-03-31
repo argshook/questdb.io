@@ -94,7 +94,7 @@ writers. Details on logging configuration can be found on the
 Configuring that QuestDB should send alerts to Alertmanager alerting is done in
 QuestDB's log config with the address and port for Alertmanager:
 
-```bash title="./conf/log.conf"
+```ini title="./conf/log.conf"
 # Which writers to enable
 writers=stdout,alert
 
@@ -135,7 +135,7 @@ and is a global timeout in seconds used for long-running queries. For more
 information on setting this parameter, see the
 [server configuration documentation](/docs/reference/configuration/).
 
-```bash title="/path/to/server.conf"
+```ini title="/path/to/server.conf"
 # Default is 60 sec
 query.timeout.sec=10
 ```

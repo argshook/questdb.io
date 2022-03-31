@@ -19,6 +19,34 @@
   to = "/get-questdb"
 
 [[redirects]]
+  from = "/docs/get-started/first-database"
+  to = "/docs/guides/first-database"
+
+[[redirects]]
+  from = "/docs/get-started/*"
+  to = "/docs/install/:splat"
+
+[[redirects]]
+  from = "/docs/develop/connect"
+  to = "/docs/connect/overview"
+
+[[redirects]]
+  from = "/docs/develop/insert-data"
+  to = "/docs/connect/overview"
+
+[[redirects]]
+  from = "/docs/develop/query-data"
+  to = "/docs/connect/overview"
+
+[[redirects]]
+  from = "/docs/reference/web-console"
+  to = "/docs/connect/web-console"
+
+[[redirects]]
+  from = "/docs/develop/authenticate"
+  to = "/docs/reference/api/ilp/authenticate"
+
+[[redirects]]
   from = "/docs/reference/client/grafana"
   to = "/docs/third-party-tools/grafana"
 

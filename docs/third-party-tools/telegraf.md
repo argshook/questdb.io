@@ -19,9 +19,9 @@ visualization.
 ## Prerequisites
 
 - **QuestDB** must be running and accessible. You can do so from
-  [Docker](/docs/get-started/docker/), the
-  [binaries](/docs/get-started/binaries/), or
-  [Homebrew](/docs/get-started/homebrew/) for macOS users.
+  [Docker](/docs/install/docker/), the
+  [binaries](/docs/install/binaries/), or
+  [Homebrew](/docs/install/homebrew/) for macOS users.
 
 - **Telegraf** can be installed using
   [homebrew](https://formulae.brew.sh/formula/telegraf),
@@ -136,7 +136,7 @@ section of the server configuration page.
 Create a new file named `questdb_udp.conf` in one of the locations Telegraf can
 load configuration files from and paste the following example:
 
-```shell title="/path/to/telegraf/config/questdb_udp.conf"
+```toml title="/path/to/telegraf/config/questdb_udp.conf"
 # Configuration for Telegraf agent
 [agent]
   ## Default data collection interval for all inputs

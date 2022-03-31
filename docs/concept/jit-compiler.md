@@ -51,7 +51,7 @@ feature. To enable it, change the `cairo.sql.jit.mode` setting in the
 [server configuration](/docs/reference/configuration/) file from `off` to
 `scalar`:
 
-```bash title="path/to/server.conf"
+```ini title="path/to/server.conf"
 cairo.sql.jit.mode=scalar
 ```
 

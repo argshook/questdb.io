@@ -20,9 +20,9 @@ instance, and how to enable alerting from QuestDB to Prometheus Alertmanager.
 ## Prerequisites
 
 - **QuestDB** must be running and accessible. You can do so from
-  [Docker](/docs/get-started/docker/), the
-  [binaries](/docs/get-started/binaries/), or
-  [Homebrew](/docs/get-started/homebrew/) for macOS users.
+  [Docker](/docs/install/docker/), the
+  [binaries](/docs/install/binaries/), or
+  [Homebrew](/docs/install/homebrew/) for macOS users.
 
 - **Prometheus** can be installed using
   [homebrew](https://formulae.brew.sh/formula/prometheus),
@@ -42,7 +42,7 @@ QuestDB has a `/metrics` HTTP endpoint on port `9003` to expose Prometheus
 metrics. Before being able to query metrics, they must be enabled via the
 `metrics.enabled` key in server configuration:
 
-```bash title="/path/to/server.conf"
+```ini title="/path/to/server.conf"
 metrics.enabled=true
 ```
 
@@ -186,7 +186,7 @@ file `./conf/log.conf` with the following contents. `172.17.0.2` in this case is
 the IP address of the docker container for alertmanager that was discovered by
 running the `docker inspect ` command above.
 
-```bash title="./conf/log.conf"
+```ini title="./conf/log.conf"
 # Which writers to enable
 writers=stdout,alert
 

@@ -1,5 +1,5 @@
 ---
-title: Create my first dataset
+title: A first SQL dataset
 description:
   This document shows how to work with QuestDB as a time series database by
   generating dummy time series data, insert the data into a table, then querying
@@ -21,12 +21,12 @@ of sensors.
 
 :::info
 
-All commands are run through the [Web Console](/docs/reference/web-console/)
+All commands are run through the [Web Console](/docs/connect/web-console)
 accessible at http://localhost:9000.
 
 You can also run the same SQL via the
-[Postgres endpoint](/docs/reference/api/postgres/) or the
-[REST API](/docs/reference/api/rest/).
+[Postgres endpoint](/docs/connect/postgres) or the
+[REST API](/docs/connect/rest).
 
 :::
 

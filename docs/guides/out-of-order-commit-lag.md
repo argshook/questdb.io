@@ -61,7 +61,7 @@ CSV import is complete.
 
 The following server configuration parameters are user-configurable:
 
-```bash
+```ini
 # the maximum number of uncommitted rows
 cairo.max.uncommitted.rows=X
 # the expected maximum time lag for out-of-order rows in milliseconds
@@ -86,7 +86,7 @@ The defaults for the out-of-order algorithm are optimized for real-world usage
 and should cover most patterns for timestamp arrival. The default configuration
 is as follows:
 
-```txt title="Defaults"
+```ini title="Defaults"
 cairo.commit.lag=300000
 cairo.max.uncommitted.rows=500000
 ```
@@ -102,7 +102,7 @@ should be minimized. For this reason, if throughput is low and timestamps are
 expected to be consistently delayed up to 30 seconds, the following
 configuration settings can be applied
 
-```txt title="server.conf"
+```ini title="server.conf"
 cairo.commit.lag=30000
 cairo.max.uncommitted.rows=500
 ```
@@ -112,7 +112,7 @@ uncommitted rows may be more appropriate. The following settings would assume a
 throughput of ten thousand records per second with a likely maximum of 1 second
 lateness for timestamp values:
 
-```txt title="server.conf"
+```ini title="server.conf"
 cairo.commit.lag=1000
 cairo.max.uncommitted.rows=10000
 ```
@@ -124,7 +124,7 @@ cairo.max.uncommitted.rows=10000
 These settings may be applied via
 [server configuration file](/docs/reference/configuration/):
 
-```txt title="server.conf"
+```ini title="server.conf"
 cairo.max.uncommitted.rows=500
 cairo.commit.lag=10000
 ```

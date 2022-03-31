@@ -48,6 +48,11 @@ Most changes are reflected live without having to restart the server.
 yarn build
 ```
 
+If this fails (often on Windows) a work-around command is:
+```script
+npx cross-env USE_SIMPLE_CSS_MINIFIER=true PWA_SW_CUSTOM= docusaurus build
+```
+
 This command generates static content into the `build` directory and can be
 served using any static contents hosting service. For that purpose, you can also
 use:

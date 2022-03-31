@@ -79,10 +79,10 @@ docker run -p 9000:9000 \
 
 This publishes the following ports:
 
-- `-p 9000:9000` - [REST API](/docs/reference/api/rest/) and
-  [Web Console](/docs/reference/web-console/)
-- `-p 9009:9009` - [InfluxDB line protocol](/docs/reference/api/ilp/overview/)
-- `-p 8812:8812` - [Postgres wire protocol](/docs/reference/api/postgres/)
+- `-p 9000:9000` - [REST API](/docs/connect/rest) and
+  [Web Console](/docs/connect/web-console)
+- `-p 9009:9009` - [InfluxDB line protocol](/docs/connect/ilp)
+- `-p 8812:8812` - [Postgres wire protocol](/docs/connect/postgres)
 - `-p 9003:9003` -
   [Min health server and Prometheus metrics](#minimal-http-server)
 
@@ -151,7 +151,7 @@ in the format `n<unit>`, where `<unit>` can be one of the following:
 
 For example:
 
-```bash title="Setting maximum send buffer size to 2MB per TCP socket"
+```ini title="Setting maximum send buffer size to 2MB per TCP socket"
 http.net.connection.sndbuf=2m
 ```
 
@@ -194,7 +194,7 @@ the [health monitoring page](/docs/operations/health-monitoring/).
 
 This section describes configuration settings for the Web Console available by
 default on port `9000`. For details on the use of this component, refer to the
-[web console documentation](/docs/reference/web-console/) page.
+[web console documentation](/docs/connect/web-console) page.
 
 | Property                                     | Default        | Description                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | -------------------------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -517,7 +517,7 @@ Details for configuring this can be found in the
 To configure this writer, add it to the `writers` config alongside other log
 writers.
 
-```bash title="log.conf"
+```ini title="log.conf"
 # Which writers to enable
 writers=stdout,alert
 

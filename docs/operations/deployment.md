@@ -19,7 +19,7 @@ docker run -p 9000:9000 \
 ```
 
 A guide for deploying QuestDB using Docker is provided in the
-[getting started with Docker](/docs/get-started/docker/) documentation page.
+[getting started with Docker](/docs/install/docker/) documentation page.
 
 ## Deployment guides
 

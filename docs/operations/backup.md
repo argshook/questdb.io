@@ -46,7 +46,7 @@ configuration in this manner, see the
 [server configuration](/docs/concept/root-directory-structure/#serverconf)
 documentation.
 
-```bash title="/path/to/server.conf"
+```ini title="/path/to/server.conf"
 cairo.sql.backup.root=/path/to/backup/dir
 ```
 

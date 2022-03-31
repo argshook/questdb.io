@@ -15,9 +15,9 @@ QuestDB with Grafana step by step.
 - [Grafana](https://grafana.com/grafana/download) should be installed and
   running.
 - QuestDB should be installed and running via
-  [Docker](/docs/get-started/docker/), the
-  [binaries](/docs/get-started/binaries/) or
-  [Homebrew](/docs/get-started/homebrew/) for macOS users.
+  [Docker](/docs/install/docker/), the
+  [binaries](/docs/install/binaries/) or
+  [Homebrew](/docs/install/homebrew/) for macOS users.
 
 ## Configure database
 

@@ -40,9 +40,9 @@ docker run -p 9000:9000 \
 This parameter will publish a port to the host, you can specify:
 
 - `-p 9000:9000` - [REST API](/docs/reference/api/rest/) and
-  [Web Console](/docs/reference/web-console/)
-- `-p 9009:9009` - [InfluxDB line protocol](/docs/reference/api/ilp/overview/)
-- `-p 8812:8812` - [Postgres wire protocol](/docs/reference/api/postgres/)
+  [Web Console](/docs/connect/web-console)
+- `-p 9009:9009` - [InfluxDB line protocol](/docs/connect/ilp)
+- `-p 8812:8812` - [Postgres wire protocol](/docs/connect/postgres)
 - `-p 9003:9003` -
   [Min health server](/docs/reference/configuration/#minimal-http-server)
 

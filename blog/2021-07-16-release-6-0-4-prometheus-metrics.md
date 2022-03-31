@@ -78,7 +78,7 @@ allows for adding basic counters and will be improved in upcoming releases. To
 activate Prometheus metrics, set the `metrics.enabled` key to `true` in
 QuestDB's `server.conf` [configuration file](/docs/reference/configuration/):
 
-```bash title=server.conf
+```ini title=server.conf
 metrics.enabled=true
 ```
 

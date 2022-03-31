@@ -30,36 +30,31 @@ data, and introduces features and capabilities unique to the system.
 - [Root directory](/docs/concept/root-directory-structure/) describes the
   directory contents of QuestDB for storage and configuration
 
-## Get started
+## Install
 
 This section explains how to install and run QuestDB using one of the following
 methods:
 
-- [Docker](/docs/get-started/docker/) for repeatable, portable and scalable
+- [Docker](/docs/install/docker/) for repeatable, portable and scalable
   installations
-- [Binaries](/docs/get-started/binaries/) for direct downloads to run on Linux,
+- [Binaries](/docs/install/binaries/) for direct downloads to run on Linux,
   macOS or Windows
-- [Homebrew](/docs/get-started/homebrew/) for running QuestDB on macOS
+- [Homebrew](/docs/install/homebrew/) for running QuestDB on macOS
 
-Once QuestDB is running, a guide is provided to
-[create your first database](/docs/get-started/first-database/).
-
-## Develop
+## Connect
 
 This section describes how to connect to QuestDB using a variety of tools and
-programming languages.
+programming languages through our various network endpoints.
 
-- [Connect](/docs/develop/connect/) using Postgres or InfluxDB clients in a
-  variety of languages
-- [Insert data](/docs/develop/insert-data/) from popular languages using
-  Postgres clients or InfluxDB line protocol, or in bulk via REST API
-- [Query data](/docs/develop/query-data/) using Postgres clients, REST API, or
-  the Web Console
-- [Authenticate](/docs/develop/authenticate/) via an additional step before
-  inserting records using InfluxDB line protocol
+- [Network Endpoints Overview](/docs/connect/overview)
+- [Web Console](/docs/connect/web-console) for quick SQL queries, charting and CVS functionality.
+- [InfluxDB Line Protocol](/docs/connect/ilp) for high performance data insertion.
+- [HTTP REST API](/docs/connect/rest) for SQL queries and CSV functionality.
+- [PostgreSQL Protocol](/docs/connect/postgres) for compatibility with a wide number of tools and libraries.
 
 ## Guides
 
+- [Create your first database](/docs/guides/first-database)
 - [Configuring commit lag of out-of-order (O3) data](/docs/guides/out-of-order-commit-lag/)
 - [Importing data in bulk via CSV](/docs/guides/importing-data/)
 - [Version 6.0 migration](/docs/guides/v6-migration/)
@@ -177,7 +172,7 @@ when starting services:
 QuestDB is bundled with a user interface which runs by default on port 9000. The
 following is reference documentation which describes how to use this UI:
 
-- [Web console](/docs/reference/web-console/) reference for using the bundled UI
+- [Web console](/docs/connect/web-console) reference for using the bundled UI
 
 ## Support
 

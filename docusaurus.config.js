@@ -102,7 +102,8 @@ const config = {
     },
     prism: {
       defaultLanguage: "questdb-sql",
-      additionalLanguages: ["rust", "csharp", "julia", "cpp", "java", "ebnf"],
+      additionalLanguages: [
+        "rust", "csharp", "julia", "cpp", "java", "ebnf", "ini", "toml"],
       theme: require("./src/internals/prism-github"),
       darkTheme: require("./src/internals/prism-dracula"),
     },
@@ -118,20 +119,20 @@ const config = {
       },
       items: [
         {
-          label: "Get Started",
+          label: "Install",
           position: "left",
           items: [
             {
               label: "Docker",
-              to: "/docs/get-started/docker/",
+              to: "/docs/install/docker/",
             },
             {
               label: "Binaries",
-              to: "/docs/get-started/binaries/",
+              to: "/docs/install/binaries/",
             },
             {
               label: "Homebrew",
-              to: "/docs/get-started/homebrew/",
+              to: "/docs/install/homebrew/",
             },
           ],
         },

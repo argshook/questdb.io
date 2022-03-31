@@ -30,13 +30,12 @@ Although the original protocol does not support it, we have added authentication
 over TCP. This works by using an
 [elliptic curve P-256](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography)
 JSON Web Token (JWT) to sign a server challenge. Details of authentication over
-ILP can be found in the
-[authentication documentation](/docs/develop/authenticate/)
+ILP can be found in the [authentication documentation](authenticate)
 
 ## Insert data
 
 Follow this link for
-[examples of sending data using ILP over TCP](/docs/develop/insert-data/#influxdb-line-protocol)
+[examples of sending data using ILP over TCP](/docs/connect/ilp).
 
 ## Error handling
 

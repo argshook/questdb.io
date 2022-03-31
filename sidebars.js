@@ -46,34 +46,40 @@ module.exports = {
       ],
     },
     {
-      label: "Get Started",
+      label: "Install",
       type: "category",
       items: [
-        "get-started/docker",
-        "get-started/binaries",
-        "get-started/homebrew",
-        "get-started/first-database",
+        "install/docker",
+        "install/binaries",
+        "install/homebrew",
       ],
     },
     {
-      label: "Develop",
+      label: "Connect",
       type: "category",
       items: [
-        "develop/connect",
-        "develop/insert-data",
-        "develop/query-data",
-        "develop/authenticate",
+        "connect/overview",
+        "connect/web-console",
+        "connect/ilp",
+        "connect/rest",
+        "connect/postgres"
       ],
     },
     {
       label: "Guides",
       type: "category",
       items: [
+        "guides/first-database",
         "guides/working-with-timestamps-timezones",
         "guides/importing-data",
         "guides/out-of-order-commit-lag",
         "guides/v6-migration",
       ],
+    },
+    {
+      label: "Tutorials",
+      type: 'link',
+      href: '/tutorial',
     },
     {
       label: "Deployment",
@@ -123,6 +129,7 @@ module.exports = {
                 "reference/api/ilp/columnset-types",
                 "reference/api/ilp/tcp-receiver",
                 "reference/api/ilp/udp-receiver",
+                "reference/api/ilp/authenticate"
               ]
             },
             "reference/api/java-embedded",
@@ -202,8 +209,7 @@ module.exports = {
             "reference/sql/where",
             "reference/sql/with",
           ],
-        },
-        "reference/web-console",
+        }
       ],
     },
     {
