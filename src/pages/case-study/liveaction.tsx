@@ -61,10 +61,10 @@ const Counterflow = () => {
 
         <div className={juCss.jumbotron__banner}>
           <img
-            alt="The web-based dashboard for LiveAction's ThreatEye network security system"
+            alt="Visualizing data in a Jupyter notebook querying data from QuestDB"
             height={170}
-            src="/img/pages/case-study/liveaction/dashboard.png"
-            width={600}
+            src="/img/pages/case-study/liveaction/visualization-questdb-jupyter.png"
+            width={800}
           />
         </div>
       </section>
@@ -133,9 +133,9 @@ const Counterflow = () => {
 
         <p className={caCss.card__subtitle}>
           In this case study, VP Product Development of ThreatEye and founder of
-          Counterflow AI Randy Caldejon describes how and why QuestDB is an
-          important component of their SaaS platform for time-series and
-          behavioural analytics.
+          Counterflow AI (now LiveAction), Randy Caldejon describes how and why
+          QuestDB is an important component of their SaaS platform for
+          time-series and behavioural analytics.
         </p>
       </section>
 
@@ -189,16 +189,17 @@ const Counterflow = () => {
             we’re running are storing billions of records with the fields which
             we analyze to perform our predictions. The performance of QuestDB
             allows us to run queries such as these without our database being
-            the bottleneck:
+            the bottleneck.
           </p>
 
           <img
-            alt="A diagram showing six patterns of network traffic highlighted by Deep Packet Dynamics"
+            alt="Running ML tooling via Jupyter notebooks to detect outliers"
             className={chCss.chart}
             height={433}
-            src="/img/pages/case-study/liveaction/console.png"
-            width={1000}
+            src="/img/pages/case-study/liveaction/local-outlier-factor-questdb-jupyter.png"
+            width={800}
           />
+
           <h3>Why we chose QuestDB for time series analytics</h3>
           <p className="font-size--large">
             We started with InfluxDB as our central time series database, but we
@@ -230,11 +231,14 @@ const Counterflow = () => {
           <p className="font-size--large">
             We’re analyzing over 150 features of network flows, and our
             customers want to see common aggregations such as{" "}
-            <b>top-n clients</b> consuming data on the network. SQL
-            compatibility makes this easy to calculate in QuestDB, quick to
-            verify in the web console, or visualize with Grafana using Postgres
-            wire.
+            <b>top-n clients</b> consuming data on the network or TLS
+            connections with unusual entropy scores. SQL compatibility makes
+            this easy to calculate in QuestDB and quick to verify in the web
+            console. Even better, the Postgres interface offers our security
+            analytics team the flexibility to dive into deeper analysis using
+            Jupyter Hub.
           </p>
+
           <p className="font-size--large">
             Our solution runs in hybrid-cloud deployments and needs to scale up
             to 40Gbps worth of inspected network data. High-performance is
@@ -242,12 +246,20 @@ const Counterflow = () => {
             high-throughput scenarios such as enterprise networks.
           </p>
 
+          <p className="font-size--large">
+            LiveAction plans to introduce a community version of the ThreatEye
+            analysis pipeline in Q2 2022. The pipeline includes native
+            integration with QuestDB. The community version will be released as
+            ThreatEye Toolkit and will be available as a Docker container on
+            Docker Hub.
+          </p>
+
           <img
-            alt="The web-based dashboard for Counterflow AI’s ThreatEye network security system"
+            alt="A diagram showing six patterns of network traffic highlighted by Deep Packet Dynamics"
             className={chCss.chart}
             height={433}
-            src="/img/pages/case-study/liveaction/threateye_ip_filter.png"
-            width={600}
+            src="/img/pages/case-study/liveaction/console.png"
+            width={1000}
           />
 
           <div
