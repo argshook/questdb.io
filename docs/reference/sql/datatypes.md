@@ -34,7 +34,7 @@ characters) or disk size, whichever is smaller.
 
 ## Type nullability
 
-Nullable types use a specific value to mark `NULL` values. 
+Nullable types use a specific value to mark `NULL` values: 
 
 | Type Name          | Null value             | Description                                                                                                           |
 |--------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------|
