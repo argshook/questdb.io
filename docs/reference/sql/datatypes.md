@@ -69,6 +69,5 @@ SELECT * FROM <table> WHERE <column> IS NOT NULL;
 ```
 
 :::note
-An **important consequence** of this is that `NULL` values
-still occupy disk space.
+`NULL` values still occupy disk space.
 :::
