@@ -1,18 +1,10 @@
 ---
 title: Launch the official QuestDB AMI via the AWS Marketplace
 sidebar_label: Official AWS Marketplace AMI
-description:
-  This document describes how to launch the official AWS Marketplace AMI with
-  QuestDB installed and how to access and secure the instance on Amazon Web
-  Services
+description: This document describes how to launch the official AWS Marketplace AMI with QuestDB installed and how to access and secure the instance on Amazon Web Services
 ---
 
-AWS Marketplace is a digital catalog with software listings from independent
-software vendors that runs on AWS. This guide describes how to launch QuestDB
-via the AWS Marketplace using the official listing. This document also describes
-usage instructions after you have launched the instance, including hints for
-authentication, the available interfaces, and tips for accessing the REST API
-and web console.
+AWS Marketplace is a digital catalog with software listings from independent software vendors that runs on AWS. This guide describes how to launch QuestDB via the AWS Marketplace using the official listing. This document also describes usage instructions after you have launched the instance, including hints for authentication, the available interfaces, and tips for accessing the REST API and web console.
 
 ## Prerequisites
 
@@ -20,17 +12,14 @@ and web console.
 
 ## Launching QuestDB on the AWS Marketplace
 
-The QuestDB listing can be found in the AWS Marketplace under the databases
-category. To launch a QuestDB instance:
+The QuestDB listing can be found in the AWS Marketplace under the databases category. To launch a QuestDB instance:
 
-1. Navigate to the
-   [QuestDB listing](https://aws.amazon.com/marketplace/search/results?searchTerms=questdb)
+1. Navigate to the [QuestDB listing](https://aws.amazon.com/marketplace/search/results?searchTerms=questdb)
 2. Click **Continue to Subscribe** and subscribe to the offering
 3. **Configure** a version, an AWS region and click **Continue to** **Launch**
 4. Choose an instance type and network configuration and click **Launch**
 
-An information panel displays the ID of the QuestDB instance with launch
-configuration details and hints for locating the instance in the EC2 console.
+An information panel displays the ID of the QuestDB instance with launch configuration details and hints for locating the instance in the EC2 console.
 
 ## QuestDB configuration
 
@@ -40,15 +29,14 @@ The server configuration file is at the following location on the AMI:
 /var/lib/questdb/conf/server.conf
 ```
 
-For details on the server properties and using this file, see the
-[server configuration documentation](/docs/reference/configuration/).
+For details on the server properties and using this file, see the [server configuration documentation](/docs/reference/configuration/).
 
 The default ports used by QuestDB interfaces are as follows:
 
-- Web console &amp; REST API is available on port `9000`
+- Web console & REST API is available on port `9000`
 - PostgreSQL wire protocol available on `8812`
 - InfluxDB line protocol `9009` (TCP and UDP)
-- Health monitoring &amp; Prometheus `/metrics` `9003`
+- Health monitoring & Prometheus `/metrics` `9003`
 
 ### Postgres credentials
 
@@ -58,8 +46,7 @@ Generated credentials can found in the server configuration file:
 /var/lib/questdb/conf/server.conf
 ```
 
-The default Postgres username is `admin` and a password is randomly generated
-during startup:
+The default Postgres username is `admin` and a password is randomly generated during startup:
 
 ```conf
 pg.user=admin
@@ -74,14 +61,11 @@ The credentials for InfluxDB line protocol can be found at
 /var/lib/questdb/conf/full_auth.json
 ```
 
-For details on authentication using this protocol, see the
-[InfluxDB line protocol authentication guide](/docs/develop/authenticate/).
+For details on authentication using this protocol, see the [InfluxDB line protocol authentication guide](/docs/develop/authenticate/).
 
 ### Disabling authentication
 
-If you would like to disable authentication for Postgres wire protocol or
-InfluxDB line protocol, comment out the following lines in the server
-configuration file:
+If you would like to disable authentication for Postgres wire protocol or InfluxDB line protocol, comment out the following lines in the server configuration file:
 
 ```bash title="/var/lib/questdb/conf/server.conf"
 # pg.password=...
